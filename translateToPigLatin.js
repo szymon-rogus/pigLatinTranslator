@@ -5,8 +5,7 @@ $(".dropdown-menu a").click(function(){
     pigLatin();
   });
 
-document.getElementById("translate").addEventListener("click", 
-() => 
+document.getElementById("translate").addEventListener("click", () => 
     pigLatin()
 );
 
