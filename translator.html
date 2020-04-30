@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+        <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href = "translator.css">
+		<title>pigLatinTranslator</title>
+  </head>
+	<body>
+    <div class="bg-container">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-5" id="col1">
+                <textarea name="en_to_pig" id="en_to_pig" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-sm-2 text-center" id="col2">
+              <button type="button" class="btn btn-primary" id="swap">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                <i class="glyphicon glyphicon-chevron-right"></i>
+              </button>
+            </div>
+            <div class="col-sm-5" id="col3">
+                <textarea name="output" id="output" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5" id="col4">
+                <button type="button" class="btn btn-primary" id="translate">Translate!</button>
+            </div>
+            <div class="col-sm-2" id="col4">
+            </div>
+            <div class="col-sm-5" id="col5">
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  way
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="#">way</a>
+                  <a class="dropdown-item" href="#">hay</a>
+                  <a class="dropdown-item" href="#">yay</a>
+                  <a class="dropdown-item" href="#">ay</a>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+    </div>
+        <script src="translateToPigLatin.js"></script>
+        <script src="translateFromPigLatin"></script>
+	</body>
+</html>
