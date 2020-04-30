@@ -22,7 +22,6 @@ translate = (text) => {
     words = words.filter(function(word) {
         return word != '' ;
     });
-    console.log(words);
     
     words.forEach((word, i, self) => {
         self[i] = checkForLetters(word.toLowerCase());
