@@ -17,9 +17,7 @@ pigLatin = () => {
 }
 
 translate = (text) => {
-    let words = text.split(' ');
-
-    words = words.filter(function(word) {
+    let words = text.split(' ').filter(function(word) {
         return word != '' ;
     });
     

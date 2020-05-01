@@ -5,7 +5,7 @@ textarea {
 }
 
 body {
-    background-image:linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("images/pig.jpg");;
+    background-image:linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url("images/pig.jpg");;
     background-size: 50px 50px;
 }
 
@@ -14,5 +14,5 @@ body {
 }
 
 #col2 {
-    margin-top: 5%;
+    margin-top: 10%;
 }
