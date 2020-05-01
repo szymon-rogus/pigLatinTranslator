@@ -2,12 +2,14 @@ var vowels = [97, 101, 105, 111, 117, 121]
 
 $(".dropdown-menu a").click(function(){
     $("#btnGroupDrop1").html($(this).text());
-    pigLatin();
+    if($("#write").text() == "English")
+        pigLatin()
   });
 
-document.getElementById("translate").addEventListener("click", () => 
-    pigLatin()
-);
+document.getElementById("translate").addEventListener("click", () => {
+    if($("#write").text() == "English")
+        pigLatin()
+});
 
 pigLatin = () => {
     let text = document.getElementById("en_to_pig").value;

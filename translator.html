@@ -25,7 +25,7 @@
       <div class="container">
         <div class="row">
             <div class="col-sm-5" id="col1">
-                <h3>English</h3>
+                <h3 id="write">English</h3>
                 <textarea name="en_to_pig" id="en_to_pig" cols="40" rows="10" spellcheck="false"></textarea>
             </div>
             <div class="col-sm-2 text-center" id="col2">
@@ -35,8 +35,8 @@
               </button>
             </div>
             <div class="col-sm-5" id="col3">
-                <h3>Pig Latin</h3>
-                <textarea name="output" id="output" cols="40" rows="10" spellcheck="false"></textarea>
+                <h3 id="read">Pig Latin</h3>
+                <textarea name="output" id="output" cols="40" rows="10" spellcheck="false" readonly></textarea>
             </div>
         </div>
         <div class="row">
@@ -62,6 +62,7 @@
     </div>
     </div>
         <script src="translateToPigLatin.js"></script>
-        <script src="translateFromPigLatin"></script>
+        <script src="translateFromPigLatin.js"></script>
+        <script src="swapTranslation.js"></script>
 	</body>
 </html>
