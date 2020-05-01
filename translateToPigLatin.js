@@ -37,27 +37,26 @@ checkForLetters = (word) => {
 }
 
 checkForIndex = (letter) => {
-    return ((letter.charCodeAt(0) >= 97 && letter.charCodeAt(0) <= 122))
+    let letterCode = letter.charCodeAt(0);
+    return (letterCode >= 97 && letterCode <= 122)
 }
 
 toPigLatin = (letters) => {
     let firstVowelIndex = letters.findIndex(firstVowel);
+    if(firstVowelIndex == -1)
+        firstVowelIndex++;
 
-    let fromFirstVowel = letters.slice(firstVowelIndex);
+    let afterFirstVowel = letters.slice(firstVowelIndex);
     let beforeFirstVowel = letters.slice(0, firstVowelIndex);
 
-    let pigLatinArray
+    let pigLatinArray = afterFirstVowel.concat(beforeFirstVowel);
+
     if(firstVowelIndex == 0)
-        pigLatinArray = fromFirstVowel.concat(beforeFirstVowel, $("#btnGroupDrop1").html().trim());
+        pigLatinArray = pigLatinArray.concat($("#btnGroupDrop1").html().trim());
     else
-        pigLatinArray = fromFirstVowel.concat(beforeFirstVowel, 'ay');
+        pigLatinArray = pigLatinArray.concat('ay');
 
-    let word = '';
-    pigLatinArray.forEach((letter) =>{
-        word += letter;
-    });
-
-    return word;
+    return pigLatinArray.join("");
 }
 
 firstVowel = (letter) => {
