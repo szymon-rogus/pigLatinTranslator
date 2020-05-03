@@ -33,6 +33,9 @@ checkForLetters = (word) => {
     if(letters.every(checkForIndex)) {
          return toPigLatin(letters);
     }
+    if(punctuationMark(letters[letters.length - 1]) && letters.slice(0, -1).every(checkForIndex)) {
+        return toPigLatin(letters.slice(0, -1), letters[letters.length - 1]);
+    }
     return word;
 }
 
@@ -41,7 +44,7 @@ checkForIndex = (letter) => {
     return (letterCode >= 97 && letterCode <= 122)
 }
 
-toPigLatin = (letters) => {
+toPigLatin = (letters, punctuationMark) => {
     let firstVowelIndex = letters.findIndex(firstVowel);
     if(firstVowelIndex == -1)
         firstVowelIndex++;
@@ -56,9 +59,17 @@ toPigLatin = (letters) => {
     else
         pigLatinArray = pigLatinArray.concat('ay');
 
-    return pigLatinArray.join("");
+    if(typeof unctuationMark == "undefined")
+        return pigLatinArray.join("");
+    else
+        return pigLatinArray.join("") + punctuationMark;
 }
 
 firstVowel = (letter) => {
     return vowels.includes(letter.charCodeAt(0));
+}
+
+punctuationMark = (letter) => {
+    let letterCode = letter.charCodeAt(0);
+    return (letterCode == 44 || letterCode == 46)
 }
