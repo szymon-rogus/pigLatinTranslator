@@ -1,4 +1,5 @@
 var vowels = [97, 101, 105, 111, 117, 121]
+var punctuationSign = [33, 44, 46, 63]
 
 $(".dropdown-menu a").click(function(){
     $("#btnGroupDrop1").html($(this).text());
@@ -34,7 +35,7 @@ checkForLetters = (word) => {
          return toPigLatin(letters);
     }
     if(punctuationMark(letters[letters.length - 1]) && letters.slice(0, -1).every(checkForIndex)) {
-        return toPigLatin(letters.slice(0, -1), letters[letters.length - 1]);
+        return toPigLatin(letters.slice(0, -1), letters[letters.length - 1]) + letters[letters.length - 1];
     }
     return word;
 }
@@ -71,5 +72,5 @@ firstVowel = (letter) => {
 
 punctuationMark = (letter) => {
     let letterCode = letter.charCodeAt(0);
-    return (letterCode == 44 || letterCode == 46)
+    return  punctuationSign.includes(letterCode);
 }
